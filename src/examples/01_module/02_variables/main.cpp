@@ -2,6 +2,8 @@
 
 int main() 
 {
+	string name = "John Doe";
+
 	display_num(10);
 	display_num(20);
 
