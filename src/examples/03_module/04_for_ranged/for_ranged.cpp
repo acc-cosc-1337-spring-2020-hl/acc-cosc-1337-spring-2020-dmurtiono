@@ -40,14 +40,21 @@ void loop_string_w_auto(const string &str)
 	}
 }
 
-
-
 void loop_vector_w_index() 
 {
-	vector<int> nums = {9, 10, 99, 5,67 };
+	vector<int> nums = {9, 10, 99, 5, 67};
 
 	for (int i = 0; i < nums.size(); ++i) 
 	{
 		std::cout << nums[i] << "\n";
+	}
+}
+
+void loop_string_w_auto_ref(string & str)
+{
+	for (auto &s : str)
+	{
+		cout << s << "\n";
+		s = 'z';
 	}
 }

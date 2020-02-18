@@ -2,6 +2,7 @@
 #include "catch.hpp"
 #include "while.h"
 #include "value_ref.h"
+#include "for_ranged.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -19,4 +20,10 @@ TEST_CASE("Test val and ref function") {
 	pass_by_val_and_ref(num1, num2);
 	REQUIRE(num1 == 5);
 	REQUIRE(num2 == 50);
+}
+
+TEST_CASE("Test for range loop by ref") {
+	string name = "Joe";
+	loop_string_w_auto_ref(name);
+	REQUIRE(name == "zzz");
 }
