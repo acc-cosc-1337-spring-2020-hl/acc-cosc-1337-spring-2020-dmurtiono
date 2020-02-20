@@ -12,14 +12,14 @@ using std::cout;
 Write function prototype for function loop_vector_w_index with no parameters.
 
 */
-void loop_vector_w_index();
+//void loop_vector_w_index();
 
 
 /*
 Write function prototype for function loop_vector_w_index with a vector of int pass by value parameter.
 
 */
-void loop_vector_w_index_val(vector<int> nums);
+void loop_vector_w_index(vector<int> nums);
 
 
 /*

@@ -3,6 +3,7 @@
 #include "while.h"
 #include "value_ref.h"
 #include "for_ranged.h"
+#include "vec.h"
 
 TEST_CASE("Verify Test Configuration", "verification") {
 	REQUIRE(true == true);
@@ -26,4 +27,18 @@ TEST_CASE("Test for range loop by ref") {
 	string name = "Joe";
 	loop_string_w_auto_ref(name);
 	REQUIRE(name == "zzz");
+}
+
+TEST_CASE("Test vec functions") {
+	vector<int> nums{ 9, 10, 99, 5, 67 };
+	vector<int> expected{ 9, 10, 99, 5, 67 };
+
+	loop_vector_w_index(nums);
+
+	REQUIRE(nums == expected);
+
+	expected = { 0, 0, 0, 0, 0 };
+	loop_vector_w_index_ref(nums);
+
+	REQUIRE(nums == expected);
 }
